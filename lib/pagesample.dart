@@ -9,7 +9,7 @@ class MyLogin extends StatefulWidget {
 }
 
 class _MyLoginState extends State<MyLogin> {
-  int currentIndex = 1;
+  int currentIndex = 0;
   setBottomBarIndex(index) {
     setState(() {
       currentIndex = index;
@@ -92,79 +92,52 @@ class _MyLoginState extends State<MyLogin> {
               ),
             ),
           ),
-          Center(child: Builder(
-            builder: (context) {
-              if (currentIndex == 1) {
-                return Container(
-                  padding: const EdgeInsets.only(top: 200),
-                  child: new Form(
-                    child: Theme(
-                      data: new ThemeData(
-                          brightness: Brightness.light,
-                          primarySwatch: Colors.pink,
-                          inputDecorationTheme: new InputDecorationTheme(
-                              labelStyle: new TextStyle(
-                            color: Colors.pink,
-                            fontSize: 20.0,
-                          ))),
-                      child: Container(
-                        padding: const EdgeInsets.all(40.0),
-                        child: new Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            new TextFormField(
-                              decoration: new InputDecoration(
-                                labelText: "Enter Email",
-                              ),
-                              keyboardType: TextInputType.emailAddress,
-                            ),
-                            new TextFormField(
-                              decoration: new InputDecoration(
-                                labelText: "Enter Password",
-                              ),
-                              keyboardType: TextInputType.text,
-                              obscureText: true,
-                            ),
-                            new Padding(
-                                padding: const EdgeInsets.only(top: 40.0)),
-                            new MaterialButton(
-                              height: 40.0,
-                              minWidth: 60.0,
-                              color: Colors.pink[200],
-                              textColor: Colors.white,
-                              child: new Text("Login"),
-                              onPressed: () => {},
-                              splashColor: Colors.pink,
-                            ),
-                          ],
+          Container(
+            padding: const EdgeInsets.only(top: 200),
+            child: new Form(
+              child: Theme(
+                data: new ThemeData(
+                    brightness: Brightness.light,
+                    primarySwatch: Colors.pink,
+                    inputDecorationTheme: new InputDecorationTheme(
+                        labelStyle: new TextStyle(
+                      color: Colors.pink,
+                      fontSize: 20.0,
+                    ))),
+                child: Container(
+                  padding: const EdgeInsets.all(40.0),
+                  child: new Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      new TextFormField(
+                        decoration: new InputDecoration(
+                          labelText: "Enter Email",
                         ),
+                        keyboardType: TextInputType.emailAddress,
                       ),
-                    ),
-                  ),
-                );
-              } else {
-                return Container(
-                  height: 300.0,
-                  width: 150,
-                  decoration: new BoxDecoration(
-                    boxShadow: [
-                      //color: Colors.white, //background color of box
-                      BoxShadow(
-                        color: Colors.pink[100],
-                        blurRadius: 15.0, // soften the shadow
-                        spreadRadius: 55.0, //extend the shadow
-                        offset: Offset(
-                          0.0, // Move to right 10  horizontally
-                          0.0, // Move to bottom 10 Vertically
+                      new TextFormField(
+                        decoration: new InputDecoration(
+                          labelText: "Enter Password",
                         ),
-                      )
+                        keyboardType: TextInputType.text,
+                        obscureText: true,
+                      ),
+                      new Padding(padding: const EdgeInsets.only(top: 40.0)),
+                      new MaterialButton(
+                        height: 40.0,
+                        minWidth: 60.0,
+                        color: Colors.pink[200],
+                        textColor: Colors.white,
+                        child: new Text("Login"),
+                        onPressed: () => {},
+                        splashColor: Colors.pink,
+                      ),
                     ],
                   ),
-                  child: new Text("Hello world"),
-                );
-              }
-            },
-          ))
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );

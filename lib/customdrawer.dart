@@ -46,7 +46,7 @@ class CustomDrawer extends StatelessWidget {
             },
             leading: Icon(Icons.person),
             title: Text(
-              "Your Profile",
+              "Login",
             ),
           ),
           Divider(
@@ -57,8 +57,8 @@ class CustomDrawer extends StatelessWidget {
             onTap: () {
               debugPrint("Tapped settings");
             },
-            leading: Icon(Icons.settings),
-            title: Text("Settings"),
+            leading: Icon(Icons.storage),
+            title: Text("Storage"),
           ),
           Divider(
             height: 1,
@@ -68,8 +68,8 @@ class CustomDrawer extends StatelessWidget {
             onTap: () {
               debugPrint("Tapped Payments");
             },
-            leading: Icon(Icons.payment),
-            title: Text("Payments"),
+            leading: Icon(Icons.device_hub),
+            title: Text("Database"),
           ),
           Divider(
             height: 1,
@@ -79,8 +79,8 @@ class CustomDrawer extends StatelessWidget {
             onTap: () {
               debugPrint("Tapped Notifications");
             },
-            leading: Icon(Icons.notifications),
-            title: Text("Notifications"),
+            leading: Icon(Icons.settings),
+            title: Text("Settings"),
           ),
           Divider(
             height: 1,
